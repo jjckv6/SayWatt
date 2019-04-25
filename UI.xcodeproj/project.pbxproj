@@ -15,6 +15,9 @@
 		5B24021B226E41CA00167B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B240219226E41CA00167B0D /* LaunchScreen.storyboard */; };
 		5B240226226E41CA00167B0D /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B240225226E41CA00167B0D /* UITests.swift */; };
 		5B240231226E41CA00167B0D /* UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B240230226E41CA00167B0D /* UIUITests.swift */; };
+		5B91711E22722CE0003D6344 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91711D22722CE0003D6344 /* HistoryViewController.swift */; };
+		5B91712122722FD1003D6344 /* Bill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */; };
+		5B91712222722FD1003D6344 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */; };
 		5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0685227212C3009F2893 /* UIViewExtention.swift */; };
 		5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0687227215FC009F2893 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		5B24022C226E41CA00167B0D /* UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B240230226E41CA00167B0D /* UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUITests.swift; sourceTree = "<group>"; };
 		5B240232226E41CA00167B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B91711D22722CE0003D6344 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5BEE0685227212C3009F2893 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		5BEE0687227215FC009F2893 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +109,7 @@
 		5B24020C226E41C900167B0D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5B91712322722FDB003D6344 /* Model */,
 				5B24020D226E41C900167B0D /* AppDelegate.swift */,
 				5B24020F226E41C900167B0D /* ViewController.swift */,
 				5BEE0687227215FC009F2893 /* ColorConstants.swift */,
@@ -112,6 +119,7 @@
 				5B240219226E41CA00167B0D /* LaunchScreen.storyboard */,
 				5B24021C226E41CA00167B0D /* Info.plist */,
 				5B240214226E41C900167B0D /* UI.xcdatamodeld */,
+				5B91711D22722CE0003D6344 /* HistoryViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -132,6 +140,15 @@
 				5B240232226E41CA00167B0D /* Info.plist */,
 			);
 			path = UIUITests;
+			sourceTree = "<group>";
+		};
+		5B91712322722FDB003D6344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */,
+				5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B91712122722FD1003D6344 /* Bill+CoreDataClass.swift in Sources */,
 				5B240210226E41C900167B0D /* ViewController.swift in Sources */,
 				5B240216226E41C900167B0D /* UI.xcdatamodeld in Sources */,
 				5B24020E226E41C900167B0D /* AppDelegate.swift in Sources */,
+				5B91711E22722CE0003D6344 /* HistoryViewController.swift in Sources */,
 				5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */,
+				5B91712222722FD1003D6344 /* Bill+CoreDataProperties.swift in Sources */,
 				5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
