@@ -165,13 +165,55 @@
                     <view key="view" contentMode="scaleToFill" id="ruN-yN-rJy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.9187832923" green="1" blue="0.098207578710000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHt-Rh-4zE">
+                                <rect key="frame" x="0.0" y="150" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="577907149.80386698">
+                                    <!--2019-04-25 17:45:49 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVK-tt-8Yb">
+                                <rect key="frame" x="194" y="112" width="200" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjY-jf-YFQ">
+                                <rect key="frame" x="20" y="116.5" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjA-60-dxe">
+                                <rect key="frame" x="159" y="374" width="97" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-MZ-x0r">
+                                <rect key="frame" x="0.0" y="424" width="428" height="438"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rVK-tt-8Yb" firstAttribute="top" secondItem="ruN-yN-rJy" secondAttribute="topMargin" constant="24" id="EHN-61-Emw"/>
+                            <constraint firstItem="wde-y6-u3b" firstAttribute="trailing" secondItem="jHt-Rh-4zE" secondAttribute="trailing" id="G2u-lG-uwv"/>
+                            <constraint firstItem="jHt-Rh-4zE" firstAttribute="leading" secondItem="wde-y6-u3b" secondAttribute="leading" id="Mdr-jx-vFl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yjY-jf-YFQ" secondAttribute="leading" id="Pj7-He-Pi3"/>
+                            <constraint firstItem="jHt-Rh-4zE" firstAttribute="top" secondItem="ruN-yN-rJy" secondAttribute="topMargin" constant="62" id="RFz-k6-nmv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rVK-tt-8Yb" secondAttribute="trailing" id="Zid-Yt-YoO"/>
+                            <constraint firstItem="rVK-tt-8Yb" firstAttribute="centerY" secondItem="yjY-jf-YFQ" secondAttribute="centerY" id="kJg-ii-Lu4"/>
+                            <constraint firstItem="rVK-tt-8Yb" firstAttribute="leading" secondItem="yjY-jf-YFQ" secondAttribute="trailing" constant="3" id="sjF-2W-j2i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wde-y6-u3b"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbX-Nr-UuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-131"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="-119.19642857142857"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="gw6-ia-ZFb">
