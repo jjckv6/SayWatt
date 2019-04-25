@@ -15,6 +15,8 @@
 		5B24021B226E41CA00167B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B240219226E41CA00167B0D /* LaunchScreen.storyboard */; };
 		5B240226226E41CA00167B0D /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B240225226E41CA00167B0D /* UITests.swift */; };
 		5B240231226E41CA00167B0D /* UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B240230226E41CA00167B0D /* UIUITests.swift */; };
+		5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0685227212C3009F2893 /* UIViewExtention.swift */; };
+		5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0687227215FC009F2893 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5B24022C226E41CA00167B0D /* UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B240230226E41CA00167B0D /* UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUITests.swift; sourceTree = "<group>"; };
 		5B240232226E41CA00167B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BEE0685227212C3009F2893 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		5BEE0687227215FC009F2893 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				5B24020D226E41C900167B0D /* AppDelegate.swift */,
 				5B24020F226E41C900167B0D /* ViewController.swift */,
+				5BEE0687227215FC009F2893 /* ColorConstants.swift */,
 				5B240211226E41C900167B0D /* Main.storyboard */,
+				5BEE0685227212C3009F2893 /* UIViewExtention.swift */,
 				5B240217226E41CA00167B0D /* Assets.xcassets */,
 				5B240219226E41CA00167B0D /* LaunchScreen.storyboard */,
 				5B24021C226E41CA00167B0D /* Info.plist */,
@@ -262,6 +268,8 @@
 				5B240210226E41C900167B0D /* ViewController.swift in Sources */,
 				5B240216226E41C900167B0D /* UI.xcdatamodeld in Sources */,
 				5B24020E226E41C900167B0D /* AppDelegate.swift in Sources */,
+				5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */,
+				5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

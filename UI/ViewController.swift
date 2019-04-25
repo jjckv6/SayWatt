@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var settingsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        view.setGradient(colorOne: Colors.green, colorTwo: Colors.darkGreen)
+        
+        settingsButton.layer.cornerRadius = 4
+        settingsButton.setGradient(colorOne: Colors.green, colorTwo: Colors.darkGreen)
     }
 
 
