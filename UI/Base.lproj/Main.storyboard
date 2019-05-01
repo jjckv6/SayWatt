@@ -161,17 +161,133 @@
         <!--Tracker-->
         <scene sceneID="e1a-bf-DrF">
             <objects>
-                <viewController title="Tracker" id="2sA-pB-N5y" sceneMemberID="viewController">
+                <viewController title="Tracker" id="2sA-pB-N5y" customClass="HistoryViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ruN-yN-rJy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.9187832923" green="1" blue="0.098207578710000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-MZ-x0r">
+                                <rect key="frame" x="0.0" y="189" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="billCell" textLabel="8N9-aW-fEp" detailTextLabel="ffo-fK-iTI" style="IBUITableViewCellStyleSubtitle" id="JdY-uH-jJr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JdY-uH-jJr" id="0eV-ya-fx0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8N9-aW-fEp">
+                                                    <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ffo-fK-iTI">
+                                                    <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2sA-pB-N5y" id="kco-wd-Qzp"/>
+                                    <outlet property="delegate" destination="2sA-pB-N5y" id="tLs-dj-ApD"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWv-Ya-Aru">
+                                <rect key="frame" x="156.5" y="97" width="101.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-ec-XeR">
+                                <rect key="frame" x="130" y="121" width="154.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xIE-MZ-x0r" firstAttribute="top" secondItem="wde-y6-u3b" secondAttribute="top" constant="101" id="36b-ca-9Ag"/>
+                            <constraint firstAttribute="trailing" secondItem="xIE-MZ-x0r" secondAttribute="trailing" id="5Ki-ME-tA4"/>
+                            <constraint firstItem="xIE-MZ-x0r" firstAttribute="bottom" secondItem="wde-y6-u3b" secondAttribute="bottom" id="HBt-M3-7f3"/>
+                            <constraint firstItem="xIE-MZ-x0r" firstAttribute="leading" secondItem="wde-y6-u3b" secondAttribute="leading" id="YeG-hF-5pj"/>
+                            <constraint firstItem="xPL-ec-XeR" firstAttribute="centerX" secondItem="wde-y6-u3b" secondAttribute="centerX" id="ZUr-UF-UTE"/>
+                            <constraint firstItem="DWv-Ya-Aru" firstAttribute="top" secondItem="wde-y6-u3b" secondAttribute="top" constant="9" id="lRE-Q7-Kvw"/>
+                            <constraint firstItem="DWv-Ya-Aru" firstAttribute="centerX" secondItem="wde-y6-u3b" secondAttribute="centerX" id="lxw-ZD-S1W"/>
+                            <constraint firstItem="xPL-ec-XeR" firstAttribute="top" secondItem="DWv-Ya-Aru" secondAttribute="bottom" id="yMk-h0-RbE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wde-y6-u3b"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Energy Bill History" id="fSA-OG-zy0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sA-n8-MgU">
+                            <connections>
+                                <segue destination="u9W-kI-L5Z" kind="show" id="tFM-N2-kYa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BillHistoryTableView" destination="xIE-MZ-x0r" id="6ya-3w-mii"/>
+                        <outlet property="averageBillLabel" destination="xPL-ec-XeR" id="ocU-rh-isU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbX-Nr-UuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-131"/>
+            <point key="canvasLocation" x="1528.985507246377" y="-599.33035714285711"/>
+        </scene>
+        <!--New Energy Bill-->
+        <scene sceneID="Bs8-cr-a4a">
+            <objects>
+                <viewController id="u9W-kI-L5Z" customClass="NewBillViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yd-oZ-toG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="b5J-C8-3XB">
+                                <rect key="frame" x="47" y="216" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="578365112.13495195">
+                                    <!--2019-05-01 00:58:32 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Bill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z90-Fe-imI">
+                                <rect key="frame" x="20" y="108" width="374" height="64"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b5J-C8-3XB" firstAttribute="centerX" secondItem="1wJ-eC-Uqd" secondAttribute="centerX" id="7Ea-KH-VIR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z90-Fe-imI" secondAttribute="trailing" id="A8h-vK-mJa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Z90-Fe-imI" secondAttribute="leading" id="XeE-a0-q1W"/>
+                            <constraint firstItem="Z90-Fe-imI" firstAttribute="top" secondItem="1wJ-eC-Uqd" secondAttribute="top" constant="20" id="Xzd-pq-lm6"/>
+                            <constraint firstItem="b5J-C8-3XB" firstAttribute="top" secondItem="Z90-Fe-imI" secondAttribute="bottom" constant="44" id="fIn-BE-HMI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1wJ-eC-Uqd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Energy Bill" id="cNl-gy-Oeq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="aTq-rS-J3l">
+                            <connections>
+                                <action selector="saveBill:" destination="u9W-kI-L5Z" id="n1G-Dl-4eO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="billDatePicker" destination="b5J-C8-3XB" id="ar3-xl-rpN"/>
+                        <outlet property="billTextField" destination="Z90-Fe-imI" id="cHK-yC-xT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exd-jk-qm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289.8550724637685" y="-596.65178571428567"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="gw6-ia-ZFb">
@@ -186,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHX-f9-Psk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3268" y="-131"/>
+            <point key="canvasLocation" x="2890" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gvw-H4-Jpg">
