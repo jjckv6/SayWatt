@@ -13,9 +13,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var bills: [Bill] = []
 
+    @IBOutlet weak var averageBillLabel: UILabel!
     @IBOutlet weak var BillHistoryTableView: UITableView!
-    @IBOutlet weak var BillAmount: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
     
     let dateFormatter = DateFormatter()
     
@@ -28,6 +27,28 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         dateFormatter.timeStyle = .medium
         dateFormatter.dateStyle = .medium
         
+        averageBillLabel.text = "$\(getAverageOfBills())"
+
+        
+    }
+    
+    func deleteBill(at indexPath: IndexPath) {
+        let bill = bills[indexPath.row]
+        
+        if let managedObjectContext = bill.managedObjectContext {
+            managedObjectContext.delete(bill)
+            
+            do {
+                try managedObjectContext.save()
+                self.bills.remove(at: indexPath.row)
+                BillHistoryTableView.deleteRows(at: [indexPath], with: .automatic)
+                averageBillLabel.text = "$\(getAverageOfBills())"
+
+            } catch {
+                alertNotifyUser(message: "Delete failed.")
+                BillHistoryTableView.reloadData()
+            }
+        }
     }
     
     func fetchBills() {
@@ -48,32 +69,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         fetchBills()
         BillHistoryTableView.reloadData()
+        averageBillLabel.text = "$\(getAverageOfBills())"
     }
-    
-    @IBAction func SaveBill(_ sender: Any) {
-        
-        guard let billAmount = Double(BillAmount.text!) else {
-            return
-        }
-        let date = datePicker.date
-        
-        let bill = Bill(date: date, amount: billAmount)
-        
-        if let bill = bill {
-            do {
-                let managedContext = bill.managedObjectContext
-                try managedContext?.save()
-                
-                fetchBills()
-                BillHistoryTableView.reloadData()
-                print("Bill Saved")
-            } catch {
-                alertNotifyUser(message: "Bill not saved.\nAn error occured saving context.")
-            }
-        } else {
-            alertNotifyUser(message: "Bill not saved.\nA Bill entity could not be created.")
-        }
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bills.count
@@ -95,6 +93,28 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") {
+            action, index in
+            self.deleteBill(at: indexPath)
+        }
+        
+        return [delete]
+    }
+    
+    func getAverageOfBills() -> String {
+        var average = 0.0
+        let total = Double(bills.count)
+        
+        for bill in bills {
+            average += bill.amount
+        }
+        if bills.count == 0 {
+            return "0.0"
+        }
+            return String(format: "%.2f", average / total)
     }
 
 }
