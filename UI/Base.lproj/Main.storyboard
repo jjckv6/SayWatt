@@ -131,13 +131,28 @@
         <!--Tips-->
         <scene sceneID="ctT-SN-MrW">
             <objects>
-                <viewController title="Tips" id="b2J-N1-72n" sceneMemberID="viewController">
+                <viewController title="Tips" id="b2J-N1-72n" customClass="TipsViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7Z-Rh-tyD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-zE-vR2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.21196065620000001" blue="0.17502292489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RS1-zE-vR2" firstAttribute="leading" secondItem="1r8-77-UE8" secondAttribute="leading" id="G9z-b5-7UB"/>
+                            <constraint firstItem="RS1-zE-vR2" firstAttribute="top" secondItem="1r8-77-UE8" secondAttribute="top" id="KZJ-3d-eGw"/>
+                            <constraint firstItem="1r8-77-UE8" firstAttribute="trailing" secondItem="RS1-zE-vR2" secondAttribute="trailing" id="aG9-aM-7ww"/>
+                            <constraint firstItem="1r8-77-UE8" firstAttribute="bottom" secondItem="RS1-zE-vR2" secondAttribute="bottom" id="bax-Oj-3ro"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1r8-77-UE8"/>
                     </view>
+                    <connections>
+                        <outlet property="tipsTableView" destination="RS1-zE-vR2" id="X0X-he-tzJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQM-3b-1DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
