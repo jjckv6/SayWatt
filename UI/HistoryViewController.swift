@@ -57,6 +57,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Bill> = Bill.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "rawDate", ascending: false)]
         
         do {
             bills = try managedContext.fetch(fetchRequest)

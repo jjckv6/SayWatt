@@ -120,7 +120,6 @@
 				5B240217226E41CA00167B0D /* Assets.xcassets */,
 				5B240219226E41CA00167B0D /* LaunchScreen.storyboard */,
 				5B24021C226E41CA00167B0D /* Info.plist */,
-				5B240214226E41C900167B0D /* UI.xcdatamodeld */,
 				5B91711D22722CE0003D6344 /* HistoryViewController.swift */,
 				5BBD8413227927AB00BE185D /* NewBillViewController.swift */,
 			);
@@ -150,6 +149,7 @@
 			children = (
 				5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */,
 				5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */,
+				5B240214226E41C900167B0D /* UI.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
