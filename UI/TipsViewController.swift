@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  UI
 //
-//  Created by Josiah Callaway on 4/22/19.
+//  Created by Josiah Callaway on 5/2/19.
 //  Copyright © 2019 Josiah Callaway. All rights reserved.
 //
 
@@ -11,6 +11,10 @@ import UIKit
 class TipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tipsTableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
     let tips = [
         "WATER",
@@ -59,13 +63,16 @@ class TipsViewController: UIViewController, UITableViewDelegate, UITableViewData
         return(cell)
     }
     
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-

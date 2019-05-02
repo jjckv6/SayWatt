@@ -119,7 +119,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7MN-Gf-Oqv"/>
                     <connections>
-                        <outlet property="settingsButton" destination="k6i-Js-EGd" id="Gzl-1f-GvX"/>
+                        <outlet property="settingsButton" destination="k6i-Js-EGd" id="Mok-gK-cAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -144,7 +144,6 @@
         <!--Tips-->
         <scene sceneID="ctT-SN-MrW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YQM-3b-1DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Tips" id="b2J-N1-72n" customClass="TipsViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7Z-Rh-tyD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -178,9 +177,10 @@
                         <viewLayoutGuide key="safeArea" id="1r8-77-UE8"/>
                     </view>
                     <connections>
-                        <outlet property="tipsTableView" destination="MVO-gm-6Lj" id="avo-7e-cvI"/>
+                        <outlet property="tipsTableView" destination="MVO-gm-6Lj" id="pJb-Rx-Eeb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQM-3b-1DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1748" y="717"/>
         </scene>
