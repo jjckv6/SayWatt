@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController{
+class ViewController: UIViewController{
     
     @IBOutlet weak var settingsButton: UIButton!
     override func viewDidLoad() {
