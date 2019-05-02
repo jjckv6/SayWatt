@@ -18,6 +18,7 @@
 		5B91711E22722CE0003D6344 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91711D22722CE0003D6344 /* HistoryViewController.swift */; };
 		5B91712122722FD1003D6344 /* Bill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */; };
 		5B91712222722FD1003D6344 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */; };
+		5BB64655227B716300C0B28A /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB64654227B716300C0B28A /* TipsViewController.swift */; };
 		5BBD8414227927AB00BE185D /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD8413227927AB00BE185D /* NewBillViewController.swift */; };
 		5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0685227212C3009F2893 /* UIViewExtention.swift */; };
 		5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0687227215FC009F2893 /* ColorConstants.swift */; };
@@ -58,6 +59,7 @@
 		5B91711D22722CE0003D6344 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5B91711F22722FD1003D6344 /* Bill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5B91712022722FD1003D6344 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5BB64654227B716300C0B28A /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		5BBD8413227927AB00BE185D /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
 		5BEE0685227212C3009F2893 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		5BEE0687227215FC009F2893 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				5B240214226E41C900167B0D /* UI.xcdatamodeld */,
 				5B91711D22722CE0003D6344 /* HistoryViewController.swift */,
 				5BBD8413227927AB00BE185D /* NewBillViewController.swift */,
+				5BB64654227B716300C0B28A /* TipsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				5B24020E226E41C900167B0D /* AppDelegate.swift in Sources */,
 				5B91711E22722CE0003D6344 /* HistoryViewController.swift in Sources */,
 				5BBD8414227927AB00BE185D /* NewBillViewController.swift in Sources */,
+				5BB64655227B716300C0B28A /* TipsViewController.swift in Sources */,
 				5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */,
 				5B91712222722FD1003D6344 /* Bill+CoreDataProperties.swift in Sources */,
 				5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */,
