@@ -146,17 +146,81 @@
         <!--Profile-->
         <scene sceneID="kj9-SN-Gm2">
             <objects>
-                <viewController title="Profile" id="Ubu-Rq-atB" sceneMemberID="viewController">
+                <viewController title="Profile" id="Ubu-Rq-atB" customClass="ProfileViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOF-yx-jFv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-if-G40">
+                                <rect key="frame" x="238" y="118" width="146" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNA-Et-dja">
+                                <rect key="frame" x="303.5" y="168" width="15" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A8-it-Fkx">
+                                <rect key="frame" x="131.5" y="775" width="151" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Share Score">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareScore:" destination="Ubu-Rq-atB" eventType="touchUpInside" id="jeE-XY-z79"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEA-yc-MEo">
+                                <rect key="frame" x="30" y="118" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="A4m-J8-HeH"/>
+                                    <constraint firstAttribute="height" constant="140" id="ria-7P-PcZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Profile"/>
+                                <connections>
+                                    <action selector="changeImage:" destination="Ubu-Rq-atB" eventType="touchUpInside" id="vW5-gn-F1D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="484-6j-hH2">
+                                <rect key="frame" x="30" y="270" width="145" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <state key="normal" title="Energy Saver">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeName:" destination="Ubu-Rq-atB" eventType="touchUpInside" id="Ygk-yY-Ahd"/>
+                                    <action selector="shareScore:" destination="Ubu-Rq-atB" eventType="touchUpInside" id="PcB-xY-EGP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.87789873206883962" green="0.24224170920835442" blue="0.88657426834106445" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yEA-yc-MEo" firstAttribute="top" secondItem="jnb-ry-Tmi" secondAttribute="top" constant="30" id="1mQ-hK-EOZ"/>
+                            <constraint firstItem="jnb-ry-Tmi" firstAttribute="trailing" secondItem="ciH-if-G40" secondAttribute="trailing" constant="30" id="209-bN-1Ob"/>
+                            <constraint firstItem="ciH-if-G40" firstAttribute="top" secondItem="yEA-yc-MEo" secondAttribute="top" id="5gc-oQ-HyY"/>
+                            <constraint firstItem="yEA-yc-MEo" firstAttribute="leading" secondItem="jnb-ry-Tmi" secondAttribute="leading" constant="30" id="Cip-kx-Daf"/>
+                            <constraint firstItem="0A8-it-Fkx" firstAttribute="centerX" secondItem="jnb-ry-Tmi" secondAttribute="centerX" id="Dex-tL-sIv"/>
+                            <constraint firstItem="484-6j-hH2" firstAttribute="top" secondItem="yEA-yc-MEo" secondAttribute="bottom" constant="12" id="LjI-pD-yeY"/>
+                            <constraint firstItem="jnb-ry-Tmi" firstAttribute="bottom" secondItem="0A8-it-Fkx" secondAttribute="bottom" constant="40" id="cDB-hF-Byz"/>
+                            <constraint firstItem="fNA-Et-dja" firstAttribute="centerX" secondItem="ciH-if-G40" secondAttribute="centerX" id="dgO-V5-IPs"/>
+                            <constraint firstItem="484-6j-hH2" firstAttribute="leading" secondItem="yEA-yc-MEo" secondAttribute="leading" id="wUF-nN-azs"/>
+                            <constraint firstItem="fNA-Et-dja" firstAttribute="top" secondItem="ciH-if-G40" secondAttribute="bottom" constant="20" id="zlw-fr-aZU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jnb-ry-Tmi"/>
                     </view>
+                    <connections>
+                        <outlet property="nameButton" destination="484-6j-hH2" id="c10-AJ-gfR"/>
+                        <outlet property="scoreLabel" destination="fNA-Et-dja" id="dNE-mZ-RW7"/>
+                        <outlet property="shareButton" destination="0A8-it-Fkx" id="QeV-MH-UfG"/>
+                        <outlet property="userImage" destination="yEA-yc-MEo" id="jIs-v4-fNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obO-Ks-0gt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3267" y="717"/>
+            <point key="canvasLocation" x="3240.579710144928" y="867.85714285714278"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="e1a-bf-DrF">

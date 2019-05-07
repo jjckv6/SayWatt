@@ -4,7 +4,13 @@
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Bill" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Profile" positionX="-45" positionY="18" width="128" height="90"/>
     </elements>
 </model>
