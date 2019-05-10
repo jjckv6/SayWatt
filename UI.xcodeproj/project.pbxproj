@@ -23,6 +23,7 @@
 		5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0685227212C3009F2893 /* UIViewExtention.swift */; };
 		5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE0687227215FC009F2893 /* ColorConstants.swift */; };
 		7CA2D7EB227B655900694BF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2D7EA227B655900694BF8 /* ProfileViewController.swift */; };
+		C77E14612284BE2E00AF843E /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E14602284BE2E00AF843E /* ChallengeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5BEE0685227212C3009F2893 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		5BEE0687227215FC009F2893 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		7CA2D7EA227B655900694BF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C77E14602284BE2E00AF843E /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				5B240217226E41CA00167B0D /* Assets.xcassets */,
 				5B240219226E41CA00167B0D /* LaunchScreen.storyboard */,
 				5B24021C226E41CA00167B0D /* Info.plist */,
+				C77E14602284BE2E00AF843E /* ChallengeViewController.swift */,
 				5B240214226E41C900167B0D /* UI.xcdatamodeld */,
 				5B91711D22722CE0003D6344 /* HistoryViewController.swift */,
 				7CA2D7EA227B655900694BF8 /* ProfileViewController.swift */,
@@ -301,6 +304,7 @@
 				5BB64655227B716300C0B28A /* TipsViewController.swift in Sources */,
 				5BEE0688227215FC009F2893 /* ColorConstants.swift in Sources */,
 				5B91712222722FD1003D6344 /* Bill+CoreDataProperties.swift in Sources */,
+				C77E14612284BE2E00AF843E /* ChallengeViewController.swift in Sources */,
 				5BEE0686227212C3009F2893 /* UIViewExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
